@@ -1,4 +1,8 @@
-package com.future_tech.daggerpractice;
+package com.future_tech.daggerpractice.di;
+
+import com.future_tech.daggerpractice.car.Rims;
+import com.future_tech.daggerpractice.car.Tires;
+import com.future_tech.daggerpractice.car.Wheels;
 
 import dagger.Module;
 import dagger.Provides;

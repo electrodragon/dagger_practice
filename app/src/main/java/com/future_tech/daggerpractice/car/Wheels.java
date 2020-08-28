@@ -1,4 +1,4 @@
-package com.future_tech.daggerpractice;
+package com.future_tech.daggerpractice.car;
 
 import javax.inject.Inject;
 

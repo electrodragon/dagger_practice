@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.future_tech.daggerpractice.car.Car;
+import com.future_tech.daggerpractice.di.CarComponent;
+
 import javax.inject.Inject;
 
 public class MainActivity extends AppCompatActivity {
