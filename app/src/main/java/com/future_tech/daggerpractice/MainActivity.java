@@ -4,9 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import javax.inject.Inject;
+
 public class MainActivity extends AppCompatActivity {
 
-    private Car mCar;
+    @Inject
+    Car mCar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,8 +17,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         CarComponent carComponent = DaggerCarComponent.create();
+        carComponent.inject(this);
 
-        mCar = carComponent.purchaseCar();
         mCar.drive();
     }
 }
