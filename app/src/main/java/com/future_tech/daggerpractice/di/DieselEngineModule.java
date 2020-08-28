@@ -5,9 +5,18 @@ import com.future_tech.daggerpractice.car.Engine;
 
 import dagger.Binds;
 import dagger.Module;
+import dagger.Provides;
 
 @Module
-public abstract class DieselEngineModule {
-    @Binds
-    abstract Engine bindEngine(DieselEngine engine);
+public class DieselEngineModule {
+    private int mHorsePower;
+
+    public DieselEngineModule(int horsePower) {
+        mHorsePower = horsePower;
+    }
+
+    @Provides
+    Engine provideEngine() {
+        return new DieselEngine(mHorsePower);
+    }
 }
